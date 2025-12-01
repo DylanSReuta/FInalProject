@@ -3,7 +3,7 @@
 
 body {
     margin: 0;
-    background: #0d0d0d;
+    background: #121212;
     font-family: 'League Spartan', sans-serif;
     color: #fff;
     overflow-x: hidden;
@@ -53,16 +53,16 @@ nav .menu a:hover {
 
 /* --- HERO SECTION --- */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 110vh;
-    background: url('https://i.imgur.com/iHTuV4L.jpeg') center/cover no-repeat;
+    min-height: 750px;
+    background-color: #0d0d0d; 
+    background-image: url('https://i.imgur.com/iHTuV4L.jpeg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-left: 140px;
-    padding-top: 180px;
-    color: white;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 120px; 
 }
 
 .hero::before {
@@ -132,11 +132,11 @@ nav .menu a:hover {
 
 /* --- SEARCH BAR --- */
 .search-section {
-    display: flex;
+    display: flex; 
     justify-content: center;
-    padding: 50px 0;
+    background-color: #2b2b2b;
+    padding: 40px 0;
 }
-
 .search-box {
     width: 60%;
     display: flex;
