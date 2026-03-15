@@ -1,29 +1,24 @@
+/* ================= HOME PAGE ================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=League+Spartan:wght@300;400;600;700;900&display=swap');
 
-* {
+.home-page * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+.home-page {
     background: #121212;
     width: 100%;
     overflow-x: hidden;
-    visibility: hidden; 
-}
-
-body {
-    margin: 0;
-    background: #121212;
+    visibility: hidden;
     font-family: 'League Spartan', sans-serif;
     color: #fff;
-    overflow-x: hidden;
 }
 
 /* --- NAVBAR --- */
-nav {
+.home-page nav {
     position: absolute;
     top: 0;
     left: 0;
@@ -36,36 +31,36 @@ nav {
     z-index: 10;
 }
 
-nav img {
+.home-page nav img {
     height: 80px;
 }
 
-nav .menu {
+.home-page nav .menu {
     margin-right: 40px;
 }
 
-nav .menu a {
+.home-page nav .menu a {
     margin-left: 22px;
     text-decoration: none;
-    font-family: 'Audiowide', sans-serif; 
+    font-family: 'Audiowide', sans-serif;
     font-size: 20px;
     transition: 0.3s;
     color: #fff;
     font-weight: bold;
 }
 
-nav .menu a.active {
+.home-page nav .menu a.active {
     color: #5ecbff;
     text-shadow: 0px 0px 12px #00aaff;
 }
 
-nav .menu a:hover {
+.home-page nav .menu a:hover {
     color: #ff40c8;
     text-shadow: 0px 0px 10px #ff40c8;
 }
 
-/* --- HERO SECTION --- */
-.hero { 
+/* --- HERO --- */
+.home-page .hero {
     position: relative;
     width: 100%;
     height: 110vh;
@@ -75,9 +70,9 @@ nav .menu a:hover {
     justify-content: flex-start;
     padding-left: 140px;
     padding-top: 180px;
-    color: white; }
+}
 
-.hero::before {
+.home-page .hero::before {
     content: "";
     position: absolute;
     top: 0;
@@ -86,23 +81,23 @@ nav .menu a:hover {
     height: 100%;
     background: linear-gradient(
         to right,
-        rgba(25, 25, 25, 0.95),
-        rgba(25, 25, 25, 0.88),
-        rgba(25, 25, 25, 0.60),
-        rgba(25, 25, 25, 0.30),
-        rgba(25, 25, 25, 0)
+        rgba(25,25,25,0.95),
+        rgba(25,25,25,0.88),
+        rgba(25,25,25,0.60),
+        rgba(25,25,25,0.30),
+        rgba(25,25,25,0)
     );
     z-index: 1;
 }
 
-.hero-content {
+.home-page .hero-content {
     position: relative;
     z-index: 2;
     max-width: 600px;
     margin-left: 30px;
 }
 
-.hero-content h1 {
+.home-page .hero-content h1 {
     font-family: 'Anton', sans-serif;
     font-size: 108px;
     font-weight: 900;
@@ -110,18 +105,17 @@ nav .menu a:hover {
     margin-bottom: 8px;
     color: #7fc4ff;
     text-shadow: 0px 0px 18px #009dff;
-    letter-spacing: 1.2px;
 }
 
-.hero-content p {
+.home-page .hero-content p {
     font-family: 'Audiowide', sans-serif;
     margin-top: 10px;
     margin-bottom: 30px;
     font-size: 14px;
-    letter-spacing: 1px;
 }
 
-.hero-buttons button {
+/* --- BUTTONS --- */
+.home-page .hero-buttons button {
     padding: 12px 30px;
     border: none;
     border-radius: 25px;
@@ -129,27 +123,27 @@ nav .menu a:hover {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    font-family: 'League Spartan', sans-serif;
 }
 
-.btn-start {
+.home-page .btn-start {
     background: #ff3dbd;
     color: #fff;
 }
 
-.btn-contact {
+.home-page .btn-contact {
     background: #4ca7ff;
     color: #fff;
 }
 
-/* --- SEARCH BAR --- */
-.search-section {
-    display: flex; 
+/* --- SEARCH --- */
+.home-page .search-section {
+    display: flex;
     justify-content: center;
     background-color: #2b2b2b;
     padding: 40px 0;
 }
-.search-box {
+
+.home-page .search-box {
     width: 60%;
     display: flex;
     background: #1b1b1b;
@@ -157,7 +151,7 @@ nav .menu a:hover {
     border-radius: 20px;
 }
 
-.search-box input {
+.home-page .search-box input {
     flex: 1;
     padding: 10px;
     background: transparent;
@@ -166,7 +160,7 @@ nav .menu a:hover {
     color: #ccc;
 }
 
-.search-box button {
+.home-page .search-box button {
     background: #4ca7ff;
     border: none;
     border-radius: 15px;
@@ -176,59 +170,132 @@ nav .menu a:hover {
 }
 
 /* --- CARDS --- */
-.cards {
+.home-page .cards {
     background: #2b2b2b;
     display: flex;
     justify-content: center;
     gap: 40px;
     padding-bottom: 80px;
     flex-wrap: wrap;
-    width: 100%;
 }
 
-.card {
+.home-page .card {
     width: 260px;
     background: #121212;
     border-radius: 20px;
     padding-bottom: 20px;
     text-align: center;
-    overflow: hidden;
     box-shadow: 0px 0px 15px #000;
-    transition: 0.3s;
 }
 
-.card img {
+.home-page .card img {
     width: 100%;
     height: 160px;
     object-fit: cover;
 }
 
-.card h3 {
+.home-page .card h3 {
     margin-top: 15px;
     font-size: 20px;
     color: #7fc4ff;
-    text-shadow: 0px 0px 10px #009dff;
 }
 
-.card p {
+.home-page .card p {
     font-size: 12px;
     padding: 0 15px;
     color: #ccc;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0px 0px 20px #009dff;
-}
-
 /* --- FOOTER --- */
-footer {
+.home-page footer {
     background: #181818;
     width: 100%;
     padding: 40px 0;
     text-align: center;
     color: #ddd;
-    font-size: 15px;
-    margin: 0;
 }
 
+/* ================= ABOUT PAGE ================= */
+
+.about-page {
+  --bg: #222238;
+  --panel: #11162a;
+  --text: #e6e8f2;
+  --muted: #6d5da2;
+  --accent1: #5bc1f1;
+  --accent2: #7367dd;
+  --accent3: #dc48da;
+  --footer: #1e1e46;
+  --nav: #000000;
+  --border: rgba(255,255,255,0.08);
+}
+
+.about-page * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.about-page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV */
+.about-page nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-page nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.about-page nav a.active {
+  color: var(--accent1);
+}
+
+.about-page nav a:hover {
+  color: var(--accent3);
+}
+
+/* MAIN */
+.about-page main {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 24px;
+  flex: 1;
+}
+
+.about-page section {
+  margin-bottom: 48px;
+}
+
+.about-page h2 {
+  font-size: 22px;
+  margin-bottom: 14px;
+  color: #6d5da2;
+}
+
+.about-page p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+.about-page footer {
+  background-color: var(--footer);
+  padding: 22px 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
