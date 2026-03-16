@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaEdgeTech - Contact</title>
 
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body class="contact-page">
+
+<header>
+
+<div class="logo">
+<a href="#" class="icon-link">
+<img src="https://i.imgur.com/pWq5QUw.png" alt="Menu" style="height:30px;">
+</a>
+
+<img src="https://i.imgur.com/p5WTPHq.png" alt="NovaEdgeTech Logo" style="height:48px;">
+</div>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="#">SUPPORT</a>
+<a href="#">SHOP</a>
+<a href="#" class="active">CONTACT</a>
+</nav>
+
+<div class="nav-icons">
+
+<a href="#" class="icon-link">
+<img src="https://i.imgur.com/Y057mM0.png" alt="Profile" style="height:32px;">
+</a>
+
+<a href="#" class="icon-link">
+<img src="https://i.imgur.com/PXvm4Xo.png" alt="Cart" style="height:32px;">
+</a>
+
+</div>
+
+</header>
+
+<main class="contact-section">
+
+<div class="contact-card">
+
+<h2>We'd Love to Hear From You</h2>
+
+<p>
+Whether you have a question about your order, need support with a custom build,
+or just want to learn more about our products. Fill out the form below and
+we'll get back to you as soon as possible.
+</p>
+
+<form class="contact-form">
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name">
+
+<label>Email Address</label>
+<input type="email" placeholder="Enter your email">
+
+<label>Subject</label>
+<input type="text" placeholder="What is this about?">
+
+<label>Message</label>
+<textarea placeholder="Type your message here..."></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div class="contact-alt">
+
+<h3>Other Ways to Reach Us</h3>
+
+<p>Email: support@novaedgetech.com</p>
+
+<p>Phone: +1 (555) 123-4567</p>
+
+<p>Social: Instagram | Twitter</p>
+
+</div>
+
+</div>
+
+</main>
+
+<footer>
+
+<div>© 2025 NovaEdgeTech (NET). All rights reserved.</div>
+
+<div style="margin-top:6px;">
+<a href="#">Home</a> |
+<a href="#">Shop</a> |
+<a href="#">Customer Service</a> |
+<a href="#">Contact Us</a>
+</div>
+
+</footer>
+
+<script>
+
+document.querySelector(".contact-form").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+alert("Message sent successfully! We will contact you soon.");
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
