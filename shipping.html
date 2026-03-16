@@ -145,13 +145,36 @@
 </footer>
 
 <script>
+
+function getParameterByName(name) {
+  const url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+  const results = regex.exec(url);
+  if (!results || !results[2]) return null;
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
+const packageParam = getParameterByName('package');
 const packageSelect = document.getElementById("package");
+
+if (packageParam && packageSelect) {
+  for (let i = 0; i < packageSelect.options.length; i++) {
+    if (packageSelect.options[i].value === packageParam) {
+      packageSelect.selectedIndex = i;
+      packageSelect.dispatchEvent(new Event('change'));
+      break;
+    }
+  }
+}
+
+
 const packageNameEl = document.getElementById("package-name");
 const packagePriceEl = document.getElementById("package-price");
 const shippingPriceEl = document.getElementById("shipping-price");
 const totalPriceEl = document.getElementById("total-price");
 const shippingCost = 20;
-
 
 packageSelect.addEventListener("change", function () {
   const selectedOption = packageSelect.options[packageSelect.selectedIndex];
@@ -162,16 +185,14 @@ packageSelect.addEventListener("change", function () {
   totalPriceEl.textContent = "Total: $" + (price + shippingCost).toLocaleString();
 });
 
-
+// Place order button validation
 document.querySelector(".order-btn").addEventListener("click", function () {
   const inputs = document.querySelectorAll(".checkout-card input");
   const terms = document.querySelectorAll(".checkbox input")[1];
 
   let valid = true;
   inputs.forEach(input => {
-    if (input.type !== "checkbox" && input.value.trim() === "") {
-      valid = false;
-    }
+    if (input.type !== "checkbox" && input.value.trim() === "") valid = false;
   });
 
   const country = document.getElementById("country").value;
@@ -187,9 +208,11 @@ document.querySelector(".order-btn").addEventListener("click", function () {
     return;
   }
 
-  alert("Order placed successfully!\n" +
-        "Package: " + packageSelect.value + "\n" +
-        totalPriceEl.textContent);
+  alert(
+    "Order placed successfully!\n" +
+    "Package: " + packageSelect.value + "\n" +
+    totalPriceEl.textContent
+  );
 });
 </script>
   
