@@ -1020,8 +1020,7 @@ color:var(--text);
 .shop-page .product-card.card-3:hover { box-shadow: 0 0 12px var(--accent3); }
 
 
-/* === SUPPORT === */
-
+/* === SUPPORT PAGE === */
 .support-page {
   --bg: #222238;
   --panel: #11162a;
@@ -1033,27 +1032,16 @@ color:var(--text);
   --footer: #1e1e46;
   --nav: #000000;
   --border: rgba(255,255,255,0.08);
-}
 
-
-/* =================================================
-   SUPPORT PAGE BASE LAYOUT
-================================================= */
-
-.support-page {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--bg) url("support-bg.jpg") center/cover no-repeat;
+  background-color: var(--bg);
   color: var(--text);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-
-/* =================================================
-   NAVBAR (SUPPORT PAGE)
-================================================= */
-
+/* ===== NAVBAR ===== */
 .support-page header {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -1061,6 +1049,12 @@ color:var(--text);
   padding: 32px 48px;
   background-color: var(--nav);
   border-bottom: 1px solid var(--border);
+}
+
+.support-page .logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .support-page nav {
@@ -1078,25 +1072,39 @@ color:var(--text);
   transition: 0.25s;
 }
 
-/* ACTIVE PAGE (SUPPORT) */
-
 .support-page nav a.active {
   color: var(--accent1);
   text-shadow: 0 0 6px var(--accent1), 0 0 12px var(--accent1);
 }
-
-/* NAV HOVER EFFECT */
 
 .support-page nav a:hover {
   color: var(--accent3);
   text-shadow: 0 0 6px var(--accent3), 0 0 14px var(--accent3);
 }
 
+.support-page .nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
 
-/* =================================================
-   SUPPORT SECTION CONTAINER
-================================================= */
+.support-page .icon-link img {
+  cursor: pointer;
+  transition: 0.25s;
+}
 
+.support-page .icon-link:hover img {
+  filter: drop-shadow(0 0 6px var(--accent3)) drop-shadow(0 0 14px var(--accent3));
+  transform: scale(1.05);
+}
+
+/* ===== ACCENT BAR ===== */
+.support-page .accent-bar {
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3));
+}
+
+/* ===== SUPPORT PANEL CENTERED ===== */
 .support-container {
   flex: 1;
   display: flex;
@@ -1105,26 +1113,16 @@ color:var(--text);
   padding: 80px 20px;
 }
 
-
-/* =================================================
-   SUPPORT PANEL (MAIN DONATION BOX)
-================================================= */
-
 .support-panel {
   background: var(--panel);
   border: 1px solid var(--border);
-  padding: 50px;
   border-radius: 12px;
+  padding: 50px;
   max-width: 600px;
   width: 100%;
   text-align: center;
   box-shadow: 0 0 25px rgba(0,0,0,0.6);
 }
-
-
-/* =================================================
-   SUPPORT TITLE
-================================================= */
 
 .support-panel h1 {
   font-size: 40px;
@@ -1133,36 +1131,24 @@ color:var(--text);
   text-shadow: 0 0 8px var(--accent1);
 }
 
-
-/* =================================================
-   SUPPORT DESCRIPTION TEXT
-================================================= */
-
 .support-panel p {
   color: var(--muted);
   margin-bottom: 30px;
 }
 
-
-/* =================================================
-   DONATION BUTTON GRID
-================================================= */
-
+/* ===== DONATION BUTTONS ===== */
 .donation-options {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   margin-bottom: 20px;
 }
-
-
-/* DONATION BUTTON STYLE */
 
 .donation-options button {
   padding: 15px;
   font-size: 18px;
   font-weight: bold;
-  background: linear-gradient(45deg,var(--accent2),var(--accent3));
+  background: linear-gradient(45deg, var(--accent2), var(--accent3));
   border: none;
   border-radius: 8px;
   color: white;
@@ -1170,17 +1156,10 @@ color:var(--text);
   transition: 0.25s;
 }
 
-/* DONATION BUTTON HOVER */
-
 .donation-options button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px var(--accent3);
 }
-
-
-/* =================================================
-   CUSTOM DONATION INPUT
-================================================= */
 
 .custom-donation {
   margin-top: 20px;
@@ -1193,9 +1172,6 @@ color:var(--text);
   border: none;
   margin-right: 8px;
 }
-
-
-/* CUSTOM DONATE BUTTON */
 
 .custom-donation button {
   padding: 12px 18px;
@@ -1210,11 +1186,7 @@ color:var(--text);
   box-shadow: 0 0 8px var(--accent1);
 }
 
-
-/* =================================================
-   FLOATING THANK YOU POPUP
-================================================= */
-
+/* ===== POPUP ===== */
 .popup {
   position: fixed;
   bottom: 30px;
@@ -1231,18 +1203,12 @@ color:var(--text);
   box-shadow: 0 0 10px var(--accent1);
 }
 
-/* POPUP ACTIVE STATE */
-
 .popup.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-
-/* =================================================
-   FOOTER (SUPPORT PAGE)
-================================================= */
-
+/* ===== FOOTER ===== */
 .support-page footer {
   background-color: var(--footer);
   border-top: 1px solid var(--border);
@@ -1255,6 +1221,7 @@ color:var(--text);
 .support-page footer a {
   color: var(--muted);
   text-decoration: none;
+  margin: 0 8px;
 }
 
 .support-page footer a:hover {
