@@ -378,3 +378,267 @@
   color: var(--accent3);
   text-shadow: 0 0 10px var(--accent3), 0 0 22px var(--accent3);
 }
+
+
+:root{
+--nav:#0c0c12;
+--footer:#0c0c12;
+--border:#2b2b35;
+--text:#ffffff;
+--muted:#9aa0b3;
+
+--accent1:#7f5cff;
+--accent2:#c850ff;
+--accent3:#ff3bd4;
+}
+
+/* ================= CONTACT PAGE GLOBAL ================= */
+
+.contact-page{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0b0b11;
+color:white;
+}
+
+/* ================= HEADER / NAV ================= */
+
+.contact-page header{
+display:grid;
+grid-template-columns:auto 1fr auto;
+align-items:center;
+padding:32px 48px;
+background-color:var(--nav);
+border-bottom:1px solid var(--border);
+}
+
+.contact-page .logo{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.contact-page nav{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+}
+
+.contact-page nav a{
+text-decoration:none;
+color:#ffffff;
+font-size:30px;
+font-weight:800;
+letter-spacing:1px;
+line-height:1;
+opacity:0.95;
+white-space:nowrap;
+transition:color .25s ease,text-shadow .25s ease;
+}
+
+.contact-page nav a.active{
+color:var(--accent1);
+text-shadow:0 0 6px var(--accent1),0 0 12px var(--accent1);
+}
+
+.contact-page nav a:hover{
+color:var(--accent3);
+text-shadow:0 0 6px var(--accent3),0 0 14px var(--accent3);
+opacity:1;
+}
+
+.contact-page .nav-icons{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.contact-page .icon-link img{
+transition:filter .25s ease,transform .25s ease;
+cursor:pointer;
+}
+
+.contact-page .icon-link:hover img{
+filter:drop-shadow(0 0 6px var(--accent3)) drop-shadow(0 0 14px var(--accent3));
+transform:scale(1.05);
+}
+
+/* ================= CONTACT SECTION ================= */
+
+.contact-page .contact-section{
+
+min-height:calc(100vh - 160px);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+padding:60px 20px;
+
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+url("https://i.imgur.com/xFlT65B.jpeg");
+
+background-size:cover;
+background-position:center;
+
+}
+
+.contact-page .contact-card{
+
+width:520px;
+
+background:rgba(20,20,30,0.9);
+
+border-radius:12px;
+
+padding:32px;
+
+border:1px solid var(--border);
+
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
+
+backdrop-filter:blur(8px);
+
+}
+
+.contact-page .contact-card h2{
+margin-bottom:8px;
+}
+
+.contact-page .contact-card p{
+color:var(--muted);
+font-size:14px;
+margin-bottom:20px;
+}
+
+/* ================= FORM ================= */
+
+.contact-page .contact-form{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.contact-page .contact-form label{
+font-size:13px;
+color:var(--muted);
+}
+
+.contact-page .contact-form input,
+.contact-page .contact-form textarea{
+
+background:#1f2233;
+
+border:1px solid #33354a;
+
+border-radius:6px;
+
+padding:10px;
+
+color:white;
+
+font-size:14px;
+
+}
+
+.contact-page .contact-form textarea{
+min-height:100px;
+resize:none;
+}
+
+.contact-page .contact-form input:focus,
+.contact-page .contact-form textarea:focus{
+
+outline:none;
+
+border-color:var(--accent1);
+
+box-shadow:0 0 6px var(--accent1);
+
+}
+
+/* ================= BUTTON ================= */
+
+.contact-page .contact-form button{
+
+margin-top:10px;
+
+padding:10px;
+
+border:none;
+
+border-radius:6px;
+
+background:linear-gradient(
+90deg,
+var(--accent1),
+var(--accent2),
+var(--accent3)
+);
+
+color:white;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.contact-page .contact-form button:hover{
+
+transform:translateY(-1px);
+
+box-shadow:0 0 10px var(--accent2);
+
+}
+
+/* ================= CONTACT ALT ================= */
+
+.contact-page .contact-alt{
+
+margin-top:20px;
+
+padding:14px;
+
+border:1px solid var(--border);
+
+border-radius:8px;
+
+background:#1a1d2c;
+
+}
+
+.contact-page .contact-alt h3{
+font-size:14px;
+margin-bottom:6px;
+}
+
+.contact-page .contact-alt p{
+font-size:13px;
+color:var(--muted);
+}
+
+/* ================= FOOTER ================= */
+
+.contact-page footer{
+background-color:var(--footer);
+border-top:1px solid var(--border);
+padding:22px 16px;
+text-align:center;
+font-size:13px;
+color:var(--muted);
+}
+
+.contact-page footer a{
+color:var(--muted);
+text-decoration:none;
+margin:0 8px;
+}
+
+.contact-page footer a:hover{
+color:var(--text);
+}
