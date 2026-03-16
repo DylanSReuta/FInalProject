@@ -963,10 +963,13 @@ color:var(--text);
   justify-content: center;
   gap: 28px;
   padding: 60px 20px;
+  flex-wrap: wrap;
 }
 
+
 .shop-page .product-card {
-  width: 300px;
+  flex: 1 1 300px; 
+  max-width: 32%;  
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -977,6 +980,7 @@ color:var(--text);
   cursor: pointer;
 }
 
+/* Maintain card hover effects */
 .shop-page .product-card:hover {
   transform: scale(1.04);
 }
