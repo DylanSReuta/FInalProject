@@ -68,11 +68,21 @@
 
     <label>ZIP / Postal Code</label>
     <input type="text">
-
-    <label>Country</label>
-    <select>
-      <option>Select Country</option>
-    </select>
+    
+     <label>Country</label>
+<select id="country">
+  <option value="">Select Country</option>
+  <option value="USA">United States</option>
+  <option value="Philippines">Philippines</option>
+  <option value="Canada">Canada</option>
+  <option value="UK">United Kingdom</option>
+  <option value="Australia">Australia</option>
+  <option value="Japan">Japan</option>
+  <option value="Germany">Germany</option>
+  <option value="France">France</option>
+  <option value="India">India</option>
+  <option value="Other">Other</option>
+</select>
 
     <div class="checkbox">
       <input type="checkbox">
@@ -97,13 +107,20 @@
 
     <h3>Order Summary</h3>
 
-    <div class="summary">
-      <div>PC Package: CyberStrike X</div>
-      <div>Price: $1,499</div>
-      <div>Shipping: $20</div>
-      <hr>
-      <div>Total: $1,519</div>
-    </div>
+<label>Choose PC Package</label>
+<select id="package">
+  <option value="NeoCore Starter" data-price="799">NeoCore Starter - $799</option>
+  <option value="CyberStrike X" data-price="1499">CyberStrike X - $1,499</option>
+  <option value="Aetherion Prime" data-price="2799">Aetherion Prime - $2,799</option>
+</select>
+
+<div class="summary" id="summary">
+  <div id="package-name">Package: NeoCore Starter</div>
+  <div id="package-price">Price: $799</div>
+  <div id="shipping-price">Shipping: $20</div>
+  <hr>
+  <div id="total-price">Total: $819</div>
+</div>
 
     <div class="checkbox">
       <input type="checkbox">
@@ -128,18 +145,37 @@
 </footer>
 
 <script>
-document.querySelector(".order-btn").addEventListener("click", function () {
+const packageSelect = document.getElementById("package");
+const packageNameEl = document.getElementById("package-name");
+const packagePriceEl = document.getElementById("package-price");
+const shippingPriceEl = document.getElementById("shipping-price");
+const totalPriceEl = document.getElementById("total-price");
+const shippingCost = 20;
 
+
+packageSelect.addEventListener("change", function () {
+  const selectedOption = packageSelect.options[packageSelect.selectedIndex];
+  const price = parseInt(selectedOption.dataset.price);
+  packageNameEl.textContent = "Package: " + selectedOption.value;
+  packagePriceEl.textContent = "Price: $" + price.toLocaleString();
+  shippingPriceEl.textContent = "Shipping: $" + shippingCost;
+  totalPriceEl.textContent = "Total: $" + (price + shippingCost).toLocaleString();
+});
+
+
+document.querySelector(".order-btn").addEventListener("click", function () {
   const inputs = document.querySelectorAll(".checkout-card input");
   const terms = document.querySelectorAll(".checkbox input")[1];
 
   let valid = true;
-
   inputs.forEach(input => {
     if (input.type !== "checkbox" && input.value.trim() === "") {
       valid = false;
     }
   });
+
+  const country = document.getElementById("country").value;
+  if (country === "") valid = false;
 
   if (!terms.checked) {
     alert("Please agree to the Terms & Conditions.");
@@ -151,10 +187,11 @@ document.querySelector(".order-btn").addEventListener("click", function () {
     return;
   }
 
-  alert("Order placed successfully!");
+  alert("Order placed successfully!\n" +
+        "Package: " + packageSelect.value + "\n" +
+        totalPriceEl.textContent);
 });
 </script>
-
   
 </body>
 </html>
