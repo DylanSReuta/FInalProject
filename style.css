@@ -980,7 +980,6 @@ color:var(--text);
   cursor: pointer;
 }
 
-/* Maintain card hover effects */
 .shop-page .product-card:hover {
   transform: scale(1.04);
 }
