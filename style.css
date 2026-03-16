@@ -960,11 +960,10 @@ color:var(--text);
 /* SHOP PRODUCTS SECTION */
 .shop-page .shop-products {
   display: flex;
-  justify-content: center;  
-  gap: 28px;             
-  padding: 60px 20px;     
-  flex-wrap: nowrap;       
-}
+  justify-content: center; 
+  gap: 28px;
+  padding: 60px 20px;
+  flex-wrap: wrap;       
 
 
 .shop-page .product-card {
