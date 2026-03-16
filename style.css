@@ -960,23 +960,24 @@ color:var(--text);
 /* SHOP PRODUCTS SECTION */
 .shop-page .shop-products {
   display: flex;
-  justify-content: space-between; 
-  padding: 60px 40px;
-  flex-wrap: nowrap;
+  justify-content: center; 
+  gap: 28px;                
+  padding: 60px 20px;      
+  flex-wrap: nowrap;       
 }
 
 
 .shop-page .product-card {
-  width: 32%; 
+  width: 300px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 22px;
   text-align: center;
   color: var(--text);
-  transition: transform .25s, box-shadow .25s;
+  transition: transform 0.25s, box-shadow 0.25s;
   cursor: pointer;
-  box-sizing: border-box;
+  box-sizing: border-box;   
 }
 
 /* Hover effect */
@@ -1011,12 +1012,10 @@ color:var(--text);
   margin-top: 10px;
 }
 
-/* ACCENT COLORS */
+/* Accent borders for each card */
 .shop-page .product-card.card-1 { border-top: 4px solid var(--accent1); }
-.shop-page .product-card.card-1:hover { box-shadow: 0 0 12px var(--accent1); }
-
 .shop-page .product-card.card-2 { border-top: 4px solid var(--accent2); }
-.shop-page .product-card.card-2:hover { box-shadow: 0 0 12px var(--accent2); }
-
 .shop-page .product-card.card-3 { border-top: 4px solid var(--accent3); }
+.shop-page .product-card.card-1:hover { box-shadow: 0 0 12px var(--accent1); }
+.shop-page .product-card.card-2:hover { box-shadow: 0 0 12px var(--accent2); }
 .shop-page .product-card.card-3:hover { box-shadow: 0 0 12px var(--accent3); }
