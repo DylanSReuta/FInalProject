@@ -1020,35 +1020,28 @@ color:var(--text);
 .shop-page .product-card.card-3:hover { box-shadow: 0 0 12px var(--accent3); }
 
 
-/* === SUPPORT PAGE === */
-.support-page {
-  --bg: #222238;
-  --panel: #11162a;
-  --text: #e6e8f2;
-  --muted: #6d5da2;
-  --accent1: #5bc1f1;
-  --accent2: #7367dd;
-  --accent3: #dc48da;
-  --footer: #1e1e46;
-  --nav: #000000;
-  --border: rgba(255,255,255,0.08);
-
+/* =================================================
+   SUPPORT PAGE BASE
+================================================= */
+body.support-page {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: #222238;
+  color: #e6e8f2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* ===== NAVBAR ===== */
+/* =================================================
+   SUPPORT NAVBAR
+================================================= */
 .support-page header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   padding: 32px 48px;
-  background-color: var(--nav);
-  border-bottom: 1px solid var(--border);
+  background-color: #000000;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .support-page .logo {
@@ -1073,13 +1066,13 @@ color:var(--text);
 }
 
 .support-page nav a.active {
-  color: var(--accent1);
-  text-shadow: 0 0 6px var(--accent1), 0 0 12px var(--accent1);
+  color: #5bc1f1;
+  text-shadow: 0 0 6px #5bc1f1, 0 0 12px #5bc1f1;
 }
 
 .support-page nav a:hover {
-  color: var(--accent3);
-  text-shadow: 0 0 6px var(--accent3), 0 0 14px var(--accent3);
+  color: #dc48da;
+  text-shadow: 0 0 6px #dc48da, 0 0 14px #dc48da;
 }
 
 .support-page .nav-icons {
@@ -1094,18 +1087,22 @@ color:var(--text);
 }
 
 .support-page .icon-link:hover img {
-  filter: drop-shadow(0 0 6px var(--accent3)) drop-shadow(0 0 14px var(--accent3));
+  filter: drop-shadow(0 0 6px #dc48da) drop-shadow(0 0 14px #dc48da);
   transform: scale(1.05);
 }
 
-/* ===== ACCENT BAR ===== */
+/* =================================================
+   SUPPORT ACCENT BAR
+================================================= */
 .support-page .accent-bar {
   height: 3px;
-  background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3));
+  background: linear-gradient(90deg, #5bc1f1, #7367dd, #dc48da);
 }
 
-/* ===== SUPPORT PANEL CENTERED ===== */
-.support-container {
+/* =================================================
+   SUPPORT PANEL
+================================================= */
+.support-page .support-container {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -1113,9 +1110,9 @@ color:var(--text);
   padding: 80px 20px;
 }
 
-.support-panel {
-  background: var(--panel);
-  border: 1px solid var(--border);
+.support-page .support-panel {
+  background: #11162a;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   padding: 50px;
   max-width: 600px;
@@ -1124,48 +1121,53 @@ color:var(--text);
   box-shadow: 0 0 25px rgba(0,0,0,0.6);
 }
 
-.support-panel h1 {
+.support-page .support-panel h1 {
   font-size: 40px;
   margin-bottom: 10px;
-  color: var(--accent1);
-  text-shadow: 0 0 8px var(--accent1);
+  color: #5bc1f1;
+  text-shadow: 0 0 8px #5bc1f1;
 }
 
-.support-panel p {
-  color: var(--muted);
+.support-page .support-panel p {
+  color: #6d5da2;
   margin-bottom: 30px;
 }
 
-/* ===== DONATION BUTTONS ===== */
-.donation-options {
+/* =================================================
+   SUPPORT DONATION BUTTONS
+================================================= */
+.support-page .donation-options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   margin-bottom: 20px;
 }
 
-.donation-options button {
+.support-page .donation-options button {
   padding: 15px;
   font-size: 18px;
   font-weight: bold;
-  background: linear-gradient(45deg, var(--accent2), var(--accent3));
+  background: linear-gradient(45deg, #7367dd, #dc48da);
   border: none;
   border-radius: 8px;
-  color: white;
+  color: #fff;
   cursor: pointer;
   transition: 0.25s;
 }
 
-.donation-options button:hover {
+.support-page .donation-options button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px var(--accent3);
+  box-shadow: 0 0 10px #dc48da;
 }
 
-.custom-donation {
+/* =================================================
+   SUPPORT CUSTOM DONATION
+================================================= */
+.support-page .custom-donation {
   margin-top: 20px;
 }
 
-.custom-donation input {
+.support-page .custom-donation input {
   width: 70%;
   padding: 12px;
   border-radius: 6px;
@@ -1173,57 +1175,61 @@ color:var(--text);
   margin-right: 8px;
 }
 
-.custom-donation button {
+.support-page .custom-donation button {
   padding: 12px 18px;
-  background: var(--accent1);
+  background: #5bc1f1;
   border: none;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
 }
 
-.custom-donation button:hover {
-  box-shadow: 0 0 8px var(--accent1);
+.support-page .custom-donation button:hover {
+  box-shadow: 0 0 8px #5bc1f1;
 }
 
-/* ===== POPUP ===== */
-.popup {
+/* =================================================
+   SUPPORT POPUP
+================================================= */
+.support-page .popup {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: var(--panel);
+  background: #11162a;
   padding: 18px 25px;
   border-radius: 8px;
-  border: 1px solid var(--accent1);
-  color: var(--text);
+  border: 1px solid #5bc1f1;
+  color: #e6e8f2;
   font-weight: bold;
   opacity: 0;
   transform: translateY(20px);
   transition: 0.4s;
-  box-shadow: 0 0 10px var(--accent1);
+  box-shadow: 0 0 10px #5bc1f1;
 }
 
-.popup.show {
+.support-page .popup.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ===== FOOTER ===== */
+/* =================================================
+   SUPPORT FOOTER
+================================================= */
 .support-page footer {
-  background-color: var(--footer);
-  border-top: 1px solid var(--border);
+  background-color: #1e1e46;
+  border-top: 1px solid rgba(255,255,255,0.08);
   padding: 22px 16px;
   text-align: center;
   font-size: 13px;
-  color: var(--muted);
+  color: #6d5da2;
 }
 
 .support-page footer a {
-  color: var(--muted);
-  text-decoration: none;
+  color: #6d5da2;
   margin: 0 8px;
+  text-decoration: none;
 }
 
 .support-page footer a:hover {
-  color: var(--text);
+  color: #e6e8f2;
 }
