@@ -1018,3 +1018,245 @@ color:var(--text);
 .shop-page .product-card.card-1:hover { box-shadow: 0 0 12px var(--accent1); }
 .shop-page .product-card.card-2:hover { box-shadow: 0 0 12px var(--accent2); }
 .shop-page .product-card.card-3:hover { box-shadow: 0 0 12px var(--accent3); }
+
+
+/* === SUPPORT === */
+
+.support-page {
+  --bg: #222238;
+  --panel: #11162a;
+  --text: #e6e8f2;
+  --muted: #6d5da2;
+  --accent1: #5bc1f1;
+  --accent2: #7367dd;
+  --accent3: #dc48da;
+  --footer: #1e1e46;
+  --nav: #000000;
+  --border: rgba(255,255,255,0.08);
+}
+
+
+/* =================================================
+   SUPPORT PAGE BASE LAYOUT
+================================================= */
+
+.support-page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg) url("support-bg.jpg") center/cover no-repeat;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =================================================
+   NAVBAR (SUPPORT PAGE)
+================================================= */
+
+.support-page header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 32px 48px;
+  background-color: var(--nav);
+  border-bottom: 1px solid var(--border);
+}
+
+.support-page nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.support-page nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: 0.25s;
+}
+
+/* ACTIVE PAGE (SUPPORT) */
+
+.support-page nav a.active {
+  color: var(--accent1);
+  text-shadow: 0 0 6px var(--accent1), 0 0 12px var(--accent1);
+}
+
+/* NAV HOVER EFFECT */
+
+.support-page nav a:hover {
+  color: var(--accent3);
+  text-shadow: 0 0 6px var(--accent3), 0 0 14px var(--accent3);
+}
+
+
+/* =================================================
+   SUPPORT SECTION CONTAINER
+================================================= */
+
+.support-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+
+/* =================================================
+   SUPPORT PANEL (MAIN DONATION BOX)
+================================================= */
+
+.support-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 50px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+
+/* =================================================
+   SUPPORT TITLE
+================================================= */
+
+.support-panel h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: var(--accent1);
+  text-shadow: 0 0 8px var(--accent1);
+}
+
+
+/* =================================================
+   SUPPORT DESCRIPTION TEXT
+================================================= */
+
+.support-panel p {
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+
+/* =================================================
+   DONATION BUTTON GRID
+================================================= */
+
+.donation-options {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+
+/* DONATION BUTTON STYLE */
+
+.donation-options button {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(45deg,var(--accent2),var(--accent3));
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* DONATION BUTTON HOVER */
+
+.donation-options button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--accent3);
+}
+
+
+/* =================================================
+   CUSTOM DONATION INPUT
+================================================= */
+
+.custom-donation {
+  margin-top: 20px;
+}
+
+.custom-donation input {
+  width: 70%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  margin-right: 8px;
+}
+
+
+/* CUSTOM DONATE BUTTON */
+
+.custom-donation button {
+  padding: 12px 18px;
+  background: var(--accent1);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.custom-donation button:hover {
+  box-shadow: 0 0 8px var(--accent1);
+}
+
+
+/* =================================================
+   FLOATING THANK YOU POPUP
+================================================= */
+
+.popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--panel);
+  padding: 18px 25px;
+  border-radius: 8px;
+  border: 1px solid var(--accent1);
+  color: var(--text);
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s;
+  box-shadow: 0 0 10px var(--accent1);
+}
+
+/* POPUP ACTIVE STATE */
+
+.popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =================================================
+   FOOTER (SUPPORT PAGE)
+================================================= */
+
+.support-page footer {
+  background-color: var(--footer);
+  border-top: 1px solid var(--border);
+  padding: 22px 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.support-page footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.support-page footer a:hover {
+  color: var(--text);
+}
