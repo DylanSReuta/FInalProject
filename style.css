@@ -836,3 +836,84 @@ color:var(--text);
 .shipping-page footer a:hover {
   color: var(--text);
 }
+
+/* === SHOP === */
+
+body.shop-page {
+  --bg: #222238;
+  --panel: #11162a;
+  --text: #e6e8f2;
+  --muted: #6d5da2;
+  --accent1: #5bc1f1;
+  --accent2: #7367dd;
+  --accent3: #dc48da;
+  --footer: #1e1e46;
+  --nav: #000;
+  --border: rgba(255,255,255,0.08);
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+
+  background:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.85)),
+    url("https://i.imgur.com/GhB9t1Z.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* NAV / HEADER8= */
+.shop-page header { ... } 
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+}
+
+.product-card {
+  width: 280px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px var(--accent1);
+}
+
+.product-card .pkg-icon {
+  width: 64px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* Card titles */
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-card h3 span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* List */
+.product-card ul {
+  font-size: 13px;
+  margin: 8px 0;
+  line-height: 1.3;
+}
+
+.product-card p {
+  font-size: 12px;
+  margin-top: 8px;
+  color: var(--muted);
+}
