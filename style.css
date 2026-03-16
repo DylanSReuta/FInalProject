@@ -960,16 +960,14 @@ color:var(--text);
 /* SHOP PRODUCTS SECTION */
 .shop-page .shop-products {
   display: flex;
-  justify-content: center;
-  gap: 28px;
-  padding: 60px 20px;
-  flex-wrap: wrap;
+  justify-content: space-between; 
+  padding: 60px 40px;
+  flex-wrap: nowrap;
 }
 
 
 .shop-page .product-card {
-  flex: 1 1 300px; 
-  max-width: 32%;  
+  width: 32%; 
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -978,8 +976,10 @@ color:var(--text);
   color: var(--text);
   transition: transform .25s, box-shadow .25s;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
+/* Hover effect */
 .shop-page .product-card:hover {
   transform: scale(1.04);
 }
