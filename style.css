@@ -855,65 +855,47 @@ body.shop-page {
   color: var(--text);
 
   background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.85)),
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
     url("https://i.imgur.com/GhB9t1Z.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 
-/* NAV / HEADER8= */
-.shop-page header { ... } 
 
-/* PRODUCTS */
+.shop-page header { 
+
+
+.shop-page nav a.active {
+  color: var(--accent1);
+  text-shadow: 0 0 6px var(--accent1), 0 0 12px var(--accent1);
+}
+
+
 .products {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 40px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:40px;
 }
 
 .product-card {
-  width: 280px;
+  width:280px;
   background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 18px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:18px;
   color: var(--text);
-  text-decoration: none;
+  cursor:pointer;
   transition: transform .25s, box-shadow .25s;
 }
 
 .product-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 15px var(--accent1);
+  transform:scale(1.05);
+  box-shadow:0 0 12px var(--accent1);
 }
 
 .product-card .pkg-icon {
-  width: 64px;
-  display: block;
-  margin: 0 auto 10px;
-}
-
-/* Card titles */
-.product-card h3 {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.product-card h3 span {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-/* List */
-.product-card ul {
-  font-size: 13px;
-  margin: 8px 0;
-  line-height: 1.3;
-}
-
-.product-card p {
-  font-size: 12px;
-  margin-top: 8px;
-  color: var(--muted);
+  width:60px;
+  display:block;
+  margin:0 auto 12px;
 }
