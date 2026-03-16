@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaEdgeTech Support</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="support-page">
+
+<header>
+
+<nav>
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="support.html" class="active">SUPPORT</a>
+  <a href="shop.html">SHOP</a>
+  <a href="contact.html">CONTACT</a>
+</nav>
+
+</header>
+
+<div class="support-container">
+
+<div class="support-panel">
+
+<h1>Support NovaEdgeTech</h1>
+
+<p>
+Your support helps us keep building better PC setups,
+improve our store, and grow the NovaEdgeTech community.
+</p>
+
+<div class="donation-options">
+
+<button onclick="donate(5)">$5 Support</button>
+<button onclick="donate(10)">$10 Support</button>
+<button onclick="donate(25)">$25 Support</button>
+<button onclick="donate(50)">$50 Support</button>
+
+</div>
+
+<div class="custom-donation">
+
+<input type="number" id="customAmount" placeholder="Custom amount">
+
+<button onclick="customDonate()">Donate</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="popup" class="popup">Thanks for your donation!</div>
+
+<footer>
+  <div>© 2025 NovaEdgeTech (NET). All rights reserved.</div>
+  <div style="margin-top:6px;">
+    <a href="index.html">Home</a> |
+    <a href="shop.html">Shop</a> |
+    <a href="contact.html">Customer Service</a> |
+    <a href="contact.html">Contact Us</a>
+  </div>
+</footer>
+
+<script>
+
+function showPopup(){
+  const popup = document.getElementById("popup");
+
+  popup.classList.add("show");
+
+  setTimeout(()=>{
+    popup.classList.remove("show");
+  },3000);
+}
+
+function donate(amount){
+  console.log("Donation:", amount);
+  showPopup();
+}
+
+function customDonate(){
+  const value = document.getElementById("customAmount").value;
+
+  if(value > 0){
+    console.log("Custom Donation:", value);
+    showPopup();
+  }
+}
+
+</script>
+
+</body>
+</html>
