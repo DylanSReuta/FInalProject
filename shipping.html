@@ -127,5 +127,34 @@
   </div>
 </footer>
 
+<script>
+document.querySelector(".order-btn").addEventListener("click", function () {
+
+  const inputs = document.querySelectorAll(".checkout-card input");
+  const terms = document.querySelectorAll(".checkbox input")[1];
+
+  let valid = true;
+
+  inputs.forEach(input => {
+    if (input.type !== "checkbox" && input.value.trim() === "") {
+      valid = false;
+    }
+  });
+
+  if (!terms.checked) {
+    alert("Please agree to the Terms & Conditions.");
+    return;
+  }
+
+  if (!valid) {
+    alert("Please fill out all required fields.");
+    return;
+  }
+
+  alert("Order placed successfully!");
+});
+</script>
+
+  
 </body>
 </html>
