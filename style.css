@@ -839,7 +839,7 @@ color:var(--text);
 
 /* === SHOP === */
 
-body.shop-page {
+.shop-page {
   --bg: #222238;
   --panel: #11162a;
   --text: #e6e8f2;
@@ -848,54 +848,172 @@ body.shop-page {
   --accent2: #7367dd;
   --accent3: #dc48da;
   --footer: #1e1e46;
-  --nav: #000;
+  --nav: #000000;
   --border: rgba(255,255,255,0.08);
 
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
-
   background:
-    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
     url("https://i.imgur.com/GhB9t1Z.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 
+/* HEADER / NAV */
+.shop-page header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 32px 48px;
+  background-color: var(--nav);
+  border-bottom: 1px solid var(--border);
+}
 
-.shop-page header { 
+.shop-page .logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
 
+.shop-page nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.shop-page nav a {
+  margin: 0;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1;
+  opacity: 0.95;
+  white-space: nowrap;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
 
 .shop-page nav a.active {
   color: var(--accent1);
   text-shadow: 0 0 6px var(--accent1), 0 0 12px var(--accent1);
 }
 
-
-.products {
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  justify-content:center;
-  padding:40px;
+.shop-page nav a:hover {
+  color: var(--accent3);
+  text-shadow: 0 0 6px var(--accent3), 0 0 14px var(--accent3);
+  opacity: 1;
 }
 
-.product-card {
-  width:280px;
-  background: var(--panel);
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:18px;
+.shop-page .nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.shop-page .icon-link img {
+  transition: filter 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+}
+
+.shop-page .icon-link:hover img {
+  filter: drop-shadow(0 0 6px var(--accent3)) drop-shadow(0 0 14px var(--accent3));
+  transform: scale(1.05);
+}
+
+.shop-page .accent-bar {
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3));
+}
+
+/* FOOTER */
+.shop-page footer {
+  background-color: var(--footer);
+  border-top: 1px solid var(--border);
+  padding: 22px 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.shop-page footer a {
+  color: var(--muted);
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.shop-page footer a:hover {
   color: var(--text);
-  cursor:pointer;
+}
+
+.shop-page .neon-shop {
+  color: var(--accent1);
+  text-shadow: 0 0 8px var(--accent1), 0 0 18px var(--accent1);
+}
+
+.shop-page .neon-shop:hover {
+  color: var(--accent3);
+  text-shadow: 0 0 10px var(--accent3), 0 0 22px var(--accent3);
+}
+
+/* SHOP PRODUCTS SECTION */
+.shop-page .shop-products {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 60px 20px;
+}
+
+.shop-page .product-card {
+  width: 300px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  color: var(--text);
   transition: transform .25s, box-shadow .25s;
+  cursor: pointer;
 }
 
-.product-card:hover {
-  transform:scale(1.05);
-  box-shadow:0 0 12px var(--accent1);
+.shop-page .product-card:hover {
+  transform: scale(1.04);
 }
 
-.product-card .pkg-icon {
-  width:60px;
-  display:block;
-  margin:0 auto 12px;
+.shop-page .product-card img {
+  width: 100px;
+  margin-bottom: 12px;
 }
+
+.shop-page .product-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.shop-page .product-card ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  margin: 12px 0;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.shop-page .product-card .price {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* ACCENT COLORS */
+.shop-page .product-card.card-1 { border-top: 4px solid var(--accent1); }
+.shop-page .product-card.card-1:hover { box-shadow: 0 0 12px var(--accent1); }
+
+.shop-page .product-card.card-2 { border-top: 4px solid var(--accent2); }
+.shop-page .product-card.card-2:hover { box-shadow: 0 0 12px var(--accent2); }
+
+.shop-page .product-card.card-3 { border-top: 4px solid var(--accent3); }
+.shop-page .product-card.card-3:hover { box-shadow: 0 0 12px var(--accent3); }
